@@ -1,0 +1,15 @@
+---
+- name: upgrade all packages
+  block:
+      - name: Upgrade all packages
+        dnf:
+            name: "*"
+            state: latest
+
+- name: install java 11
+  block:
+      - name: install java
+        dnf:
+            name: java-11-openjdk.x86_64
+            state: present
+# tasks file for jdk_11
